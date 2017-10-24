@@ -10,9 +10,9 @@ static void gpio_setup(void)
 	/* Using API functions: */
 	rcc_periph_clock_enable(RCC_GPIOA);
 
-	/* Set GPIO5 (in GPIO port A) to 'output push-pull'. */
+	/* Set GPIO0 (in GPIO port B) to 'output push-pull'. */
 	/* Using API functions: */
-	gpio_mode_setup(GPIOA, GPIO_MODE_OUTPUT, GPIO_PUPD_NONE, GPIO5);
+	gpio_mode_setup(GPIOB, GPIO_MODE_OUTPUT, GPIO_PUPD_NONE, GPIO0);
 }
 
 int main(void)
@@ -40,7 +40,7 @@ int main(void)
 		//	__asm__("nop");
 
 		/* Using API function gpio_toggle(): */
-		gpio_toggle(GPIOA, GPIO5);	/* LED on/off */
+		gpio_toggle(GPIOB, GPIO0);	/* LED on/off */
 		for (i = 0; i < 1000000; i++) {	/* Wait a bit. */
 			__asm__("nop");
 		}
