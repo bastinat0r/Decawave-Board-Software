@@ -8,7 +8,7 @@ static void gpio_setup(void)
 	/* Manually: */
 	//RCC_AHB2ENR |= RCC_AHB2ENR_GPIOAEN;
 	/* Using API functions: */
-	rcc_periph_clock_enable(RCC_GPIOA);
+	rcc_periph_clock_enable(RCC_GPIOB);
 
 	/* Set GPIO0 (in GPIO port B) to 'output push-pull'. */
 	/* Using API functions: */
